@@ -2,7 +2,7 @@
 
 This project demonstrates how two Java programs (`Peer` and `Receiver`) can securely exchange messages using **AES encryption**. It includes two use cases:
 
-- 🖥️ **Same Device Communication**  
+- 🖥️ **Same Device Communication**
 - 🌐 **Different Devices Communication** (e.g., across LAN)
 
 Both programs use **AES encryption** to secure messages in transit.
@@ -42,6 +42,8 @@ Both programs use **AES encryption** to secure messages in transit.
 
 ### 🖥️ Same Device Flow (NetBeans)
 
+- File Peer1.java is sender while File Peer2.java is receiver
+
 - You can **open two terminals** in NetBeans:
   - One for `Receiver`
   - One for `Peer`
@@ -74,6 +76,7 @@ Both programs use **AES encryption** to secure messages in transit.
     - The port `5000`
 
 > To find Computer A’s IP:
+
 - On Windows: `ipconfig`
 - On Mac/Linux: `ifconfig` or `ip a`
 
@@ -112,11 +115,13 @@ Both programs use **AES encryption** to secure messages in transit.
 ## 🔁 Message Flow Overview
 
 ### 💻 Same Device (localhost)
+
 1. `Receiver` listens on `localhost:5000`
 2. `Peer` encrypts message → sends to `localhost:5000`
 3. `Receiver` decrypts and prints the message
 
 ### 🌐 Different Devices (LAN)
+
 1. `Receiver` on Device A listens on `port 5000`
 2. `Peer` on Device B asks for:
    - Message
@@ -132,5 +137,3 @@ Both programs use **AES encryption** to secure messages in transit.
 - Ensure firewall allows Java or port 5000 on both devices
 - Confirm both devices are on the same network for cross-device messaging
 - Use consistent AES key in both files
-
-
